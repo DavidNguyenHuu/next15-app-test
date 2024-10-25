@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Feature Test Application
+
+This project is a basic Next.js application designed to test various rendering features, compare loading performance with and without Turbopack, and showcase the integration of shadcn UI components.
+
+## Features
+
+- Next.js 15.0.1 with React 19 RC
+- Turbopack integration for faster development builds
+- shadcn UI components for a modern, customizable interface
+- Server-side rendering demonstration with a users list
+- Basic routing and page structure
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
 
-```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+
+3. Run the development server:
+
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
-```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/`: Contains the main application pages and components
+- `components/`: Reusable UI components, including shadcn components
+- `lib/`: Utility functions and shared code
+- `public/`: Static assets
+
+## Key Files
+
+- `app/page.tsx`: The main entry point of the application
+- `app/users/page.tsx`: Demonstrates server-side rendering with a user list
+- `app/components/ProductCard.tsx`: An example client-side component
+- `tailwind.config.ts`: Tailwind CSS configuration, including shadcn theme settings
+
+## Testing Turbopack
+
+This project is configured to use Turbopack in development. To compare performance:
+
+1. Run with Turbopack (default):
+
+npm run dev
+
+2. Run without Turbopack:
+   Edit the `package.json` file and modify the `dev` script:
+
+"dev": "next dev",
+
+Then run:
+
+npm run dev
+
+Compare the startup and refresh times between the two configurations.
+
+## Customization
+
+The project uses shadcn UI components, which can be easily customized. Refer to the `tailwind.config.ts` file for theme settings and the `components/ui/` directory for individual component styles.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this project, check out the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [shadcn UI](https://ui.shadcn.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Feel free to contribute to this project by submitting issues or pull requests. Your feedback and improvements are welcome!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open-source and available under the MIT License.
